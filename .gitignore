@@ -96,6 +96,8 @@ logs
 results
 node_modules
 .node_history
+.cache/
+
 
 ############################
 # Package managers
@@ -129,3 +131,5 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+database/
+public/uploads/  # 업로드된 이미지 제외 (CDN 사용 시)
