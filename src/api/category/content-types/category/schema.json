@@ -26,6 +26,9 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "inversedBy": "Categories"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }

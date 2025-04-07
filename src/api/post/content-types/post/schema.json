@@ -14,9 +14,6 @@
     "Title": {
       "type": "string"
     },
-    "Content": {
-      "type": "blocks"
-    },
     "Slug": {
       "type": "string"
     },
@@ -54,6 +51,17 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "Posts"
+    },
+    "PostStatus": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published",
+        "hidden"
+      ]
+    },
+    "Content": {
+      "type": "text"
     }
   }
 }

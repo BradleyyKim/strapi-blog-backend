@@ -392,6 +392,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     Name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer;
     Posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     Slug: Schema.Attribute.String;
@@ -421,7 +422,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
-    Content: Schema.Attribute.Blocks;
+    Content: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -433,6 +434,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
       Schema.Attribute.Private;
+    PostStatus: Schema.Attribute.Enumeration<['draft', 'published', 'hidden']>;
     publishedAt: Schema.Attribute.DateTime;
     PublishedDate: Schema.Attribute.DateTime;
     Slug: Schema.Attribute.String;
