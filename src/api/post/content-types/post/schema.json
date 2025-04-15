@@ -11,13 +11,13 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Slug": {
+    "slug": {
       "type": "string"
     },
-    "FeaturedImage": {
+    "featuredImage": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -28,31 +28,25 @@
         "audios"
       ]
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "PublishedDate": {
+    "publishedDate": {
       "type": "datetime"
     },
-    "Author": {
+    "author": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "posts"
     },
-    "Tags": {
+    "tags": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
-      "mappedBy": "Posts"
+      "inversedBy": "posts"
     },
-    "Categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "mappedBy": "Posts"
-    },
-    "PostStatus": {
+    "postStatus": {
       "type": "enumeration",
       "enum": [
         "draft",
@@ -60,8 +54,14 @@
         "hidden"
       ]
     },
-    "Content": {
+    "content": {
       "type": "text"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "posts"
     }
   }
 }

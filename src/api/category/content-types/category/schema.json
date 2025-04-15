@@ -11,21 +11,21 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Slug": {
+    "slug": {
       "type": "string"
     },
-    "Posts": {
+    "posts": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::post.post",
-      "inversedBy": "Categories"
+      "inversedBy": "categories"
     },
     "order": {
       "type": "integer"
