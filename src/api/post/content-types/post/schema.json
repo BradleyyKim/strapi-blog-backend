@@ -57,11 +57,11 @@
     "content": {
       "type": "text"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::category.category",
-      "mappedBy": "posts"
+      "inversedBy": "post"
     }
   }
 }

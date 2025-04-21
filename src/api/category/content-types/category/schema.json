@@ -21,14 +21,14 @@
     "slug": {
       "type": "string"
     },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "categories"
-    },
     "order": {
       "type": "integer"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post",
+      "mappedBy": "category"
     }
   }
 }
