@@ -7,7 +7,7 @@ export default [
     config: {
       enabled: true,
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      origin: ['http://localhost:3000', 'https://mykim-blog-front.vercel.app', 'https://.vercel.app'],
+      origin: ['http://localhost:3000', 'https://mykim-blog-front.vercel.app'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       credentials: true,
     },
