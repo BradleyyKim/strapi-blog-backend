@@ -5,7 +5,7 @@
     "singularName": "category",
     "pluralName": "categories",
     "displayName": "Category",
-    "description": ""
+    "description": "블로그 포스트 카테고리"
   },
   "options": {
     "draftAndPublish": true
@@ -19,16 +19,27 @@
       "type": "text"
     },
     "slug": {
-      "type": "string"
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     },
-    "order": {
-      "type": "integer"
-    },
-    "post": {
+    "posts": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::post.post",
       "mappedBy": "category"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "parent"
     }
   }
 }

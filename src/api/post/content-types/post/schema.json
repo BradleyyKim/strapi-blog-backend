@@ -38,6 +38,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
+      "private": true,
       "inversedBy": "posts"
     },
     "tags": {
@@ -59,9 +60,9 @@
     },
     "category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "post"
+      "inversedBy": "posts"
     }
   }
 }
