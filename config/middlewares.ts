@@ -5,9 +5,12 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      origin: ['http://localhost:3000', 'https://mykim-blog-front.vercel.app'],
+      origin: [
+        'http://localhost:3000', 
+        'https://www.mykim.in',
+        'https://mykim.in'
+      ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       credentials: true,
     },
