@@ -55,14 +55,14 @@
         "hidden"
       ]
     },
-    "content": {
-      "type": "text"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "content": {
+      "type": "json"
     }
   }
 }
