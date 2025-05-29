@@ -425,7 +425,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    content: Schema.Attribute.JSON;
+    content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

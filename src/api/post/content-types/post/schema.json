@@ -62,7 +62,7 @@
       "inversedBy": "posts"
     },
     "content": {
-      "type": "json"
+      "type": "richtext"
     }
   }
 }
